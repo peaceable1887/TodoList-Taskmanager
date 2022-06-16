@@ -1,0 +1,30 @@
+
+:root {
+    /*Imports*/
+    @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Kdam+Thmor+Pro&display=swap');
+
+    /*Farben*/
+    --color-headerFooter: white;
+    --color-font: black;
+    --backgroundColor-html: #34495e;
+    --backgroundColor-headerFooter: #253745;
+    --backgroundColor-task-default: white;
+    --backgroundColor-task-alternative: #e2e2e2;
+    --backgroundColor-task-isExpired: #ffcece;
+    --color-overlay-header: white;
+    --backgroundColor-overlay-header: #253745;
+    --backgroundColor-overlay-content: white;
+    --color-overlay-inputField: white;
+    --backgroundColor-overlay-btn: #253745;
+    --color-icon: invert(99%) sepia(1%) saturate(0%) hue-rotate(136deg) brightness(108%) contrast(101%);
+    --color-icon-hover: brightness(0) saturate(100%) invert(59%) sepia(30%) saturate(3718%) hue-rotate(3deg) brightness(107%) contrast(107%);
+    --color-task-icon: brightness(0) saturate(100%) invert(59%) sepia(30%) saturate(3718%) hue-rotate(3deg) brightness(107%) contrast(107%);
+    --color-popup: white;
+    --backgroundColor-popup: darkgreen;
+
+
+    /*Schriftarten*/
+    --font-logo: 'Fredoka One', cursive;
+    --font-family: 'Roboto', sans-serif;
+
+}
