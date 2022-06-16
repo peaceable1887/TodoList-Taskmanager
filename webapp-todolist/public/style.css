@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Kdam+Thmor+Pro&display=swap');
+
+html
+{
+    background-color: var(--backgroundColor-html);
+    display: flex;
+    justify-content: center;
+    font-family: var(--font-family);
+
+}
+body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+/******* Header-Content *******/
+
+header
+{
+    background-color: var(--backgroundColor-headerFooter);
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 4% 2% 4% 2%;
+}
+header .logo
+{
+    display: flex;
+    align-items: center;
+}
+header h2
+{
+    padding: 0;
+    margin: 0;
+    color: var(--color-headerFooter);
+    font-size: 40px;
+    font-family: var(--font-logo);
+}
+header #headInteraction
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 30%;
+}
+.headBtns
+{
+    display: flex;
+    flex-direction: row;
+}
+.headBtns #textSortIcon
+{
+    color: var(--color-headerFooter);
+    font-family: var(--font-family);
+    font-weight: bold;
+    font-size: 11px;
+
+}
+.headBtns span
+{
+    color: var(--color-headerFooter);
+    font-family: var(--font-family);
+    font-weight: bold;
+    font-size: 11px;
+    margin-top: 5px;
+
+}
+.headBtns button
+{
+    border: 0;
+    background: transparent;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+header #headInteraction .headBtns button:hover
+{
+    filter: var(--color-icon-hover);
+}
+
+
+/******* Main-Content *******/
+
+main #toDoList ul
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+main #toDoList ul li
+{
+    display: flex;
+    flex-direction: column;
+    background: var(--backgroundColor-task-default);
+    padding: 2%;
+    cursor: pointer;
+    border: solid 1px grey;
+}
+
+main #toDoList ul li h5
+{
+    color: var(--color-font);
+    font-size: 28px;
+    padding: 0 0 2% 0;
+    margin: 0;
+}
+main .toDoContent
+{
+    color: var(--color-font);
+    display: flex;
+    flex-direction: row;
+    margin: 0 1% 0 1%;
+}
+main .toDoContent .toDoContentDate
+{
+    width: 100%;
+    text-align: start;
+}
+main .toDoContent .toDoContentPriority
+{
+    width: 50%;
+    text-align: center;
+}
+main .toDoContent .toDoContentStatus
+{
+    width: 100%;
+    text-align: end;
+}
+main .toDoData
+{
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+main .toDoContent img
+{
+    filter: var(--color-task-icon);
+    vertical-align: middle;
+
+}
+.headToDoList
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 0 1%;
+}
+.headToDoList button
+{
+    border: 0;
+    background: transparent;
+    font-size: 14px;
+    color: var(--color-font);
+    text-decoration: underline;
+
+}
+.midTaskContent
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+.description
+{
+    font-weight: bold;
+    color: var(--color-font);
+}
+p
+{
+    color: var(--color-font);
+    margin: 0;
+    font-weight: normal;
+}
+.taskID
+{
+    font-size: 16px;
+    color: var(--color-font);
+}
+#containerid p
+{
+    margin: 5% 0 5% 0;
+}
+.dateContent
+{
+    color: var(--color-font);
+    display: flex;
+    justify-content: space-between;
+    padding: 4% 0 0 0;
+}
+.taskBtns
+{
+    display: flex;
+    justify-content: end;
+    padding: 5% 0 3% 0;
+}
+.taskBtnsChild
+{
+    display: flex;
+    flex-direction: row;
+    width: 16%;
+    justify-content: space-between;
+}
+.taskBtnsChild button
+{
+    border: 0;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.taskBtnsChild  button span
+{
+    color: var(--color-font);
+    margin-top: 8px;
+    font-size: 11px;
+    font-weight: bold;
+}
+.taskBtnsChild button img
+{
+    width: 40px;
+    height: 40px;
+}
+.taskBtnsChild button:hover
+{
+    filter: var(--color-icon-hover);
+}
+
+/******* Footer-Content *******/
+
+footer
+{
+    background-color: var(--backgroundColor-headerFooter);
+    color: var(--color-headerFooter);
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 2% 0 2% 0;
+    bottom:0;
+    width: 100%;
+}
+
+#popup {
+    display: none;
+    text-align: center;
+    font-weight: bold;
+    width: 350px;
+    height: auto;
+    cursor: pointer;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    right: 50px;
+    z-index:5;
+    background: var(--backgroundColor-popup);
+    padding: 2%;
+    border-radius: 4px;
+}
+#popup p
+{
+    color: var(--color-popup);
+}
+
+/******* Overlay-Content *******/
+#overlaySortContainer,#overlayFilterContainer,#overlayAddTaskContainer,#overlayEditTaskContainer, #overlayDeleteTaskContainer
+{
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+}
+
+.headOverlay
+{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 5% 0;
+    padding: 3%;
+    border-bottom: 1px solid black;
+    font-weight: bold;
+    color: var(--color-overlay-header);
+    background: var(--backgroundColor-overlay-header);
+}
+.headOverlay button
+{
+    cursor: pointer;
+}
+
+.overlay
+{
+    display: none;
+    width: 350px;
+    height: auto;
+    margin: auto;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    right: 50px;
+    background: var(--backgroundColor-overlay-content);
+    z-index:5;
+    color: var(--color-font);
+
+}
+
+.sortBy, .priorityFilter, .addTaskForm, .editTaskForm
+{
+    display: flex;
+    flex-direction: column;
+    padding: 4%;
+}
+
+select, input, textarea
+{
+    padding: 1%;
+    font-family: var(--font-family);
+}
+
+.overlay form
+{
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+}
+
+#descriptionEditTask, #descriptionAddTask
+{
+    height: 100px;
+    resize: vertical;
+}
+
+#filterTask form label, #addTask form label, #editTask form label
+{
+    margin: 0 2% 2% 2%;
+    font-weight: bold;
+}
+
+.divBtn
+{
+    display: flex;
+    justify-content: space-around;
+    margin: 3% 0 7% 0;
+}
+.divBtnDeletePopup
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+.divBtn input, .divBtnDeletePopup input
+{
+    background: var(--backgroundColor-overlay-btn);
+    color: white;
+    padding: 3%;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+    /*color: #f39a00;*/
+}
+
+#text1, #text2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    color: var(--color-font);
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+}
+
+#image, #image1, #image2 {
+    transform-origin: top left;
+    /* IE 10+, Firefox, etc. */
+    -webkit-transform-origin: top left;
+    /* Chrome */
+    -ms-transform-origin: top left;
+    /* IE 9 */
+}
+
+#containerDate.rotate180 #image {
+    transform: rotate(180deg) translate(-100%, -100%);
+    -webkit-transform: rotate(180deg) translate(-100%, -100%);
+    -ms-transform: rotate(180deg) translateX(-100%, -100%);
+}
+#containerStatus.rotate180 #image2 {
+    transform: rotate(180deg) translate(-100%, -100%);
+    -webkit-transform: rotate(180deg) translate(-100%, -100%);
+    -ms-transform: rotate(180deg) translateX(-100%, -100%);
+}
+#containerName.rotate180 #image1 {
+    transform: rotate(180deg) translate(-100%, -100%);
+    -webkit-transform: rotate(180deg) translate(-100%, -100%);
+    -ms-transform: rotate(180deg) translateX(-100%, -100%);
+}
+
